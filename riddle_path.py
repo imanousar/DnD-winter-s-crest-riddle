@@ -1,6 +1,6 @@
 import streamlit as st
 import random
-
+import os 
 
 error_messages = [ "I'm sorry you rolled a 1. A dragon ate you alive for breakfast.",
     "Oops, looks like the goblins stole your correct letters.",
@@ -10,7 +10,7 @@ error_messages = [ "I'm sorry you rolled a 1. A dragon ate you alive for breakfa
     "A magical barrier blocks your path. The right word is the key."]
 
 # Define the correct word
-correct_word = "freljordspeakinn"  # Replace with your correct 16-letter word
+correct_word = os.environ.get('SOLUTION')  # Replace with your correct 16-letter word
 
 
 # Streamlit application layout
