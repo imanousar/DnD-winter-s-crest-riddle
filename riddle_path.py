@@ -38,4 +38,4 @@ if st.button("Roll your D20"):
         st.image("dnd.png")  # Update with your image path
     else:
         st.error(random.choice(error_messages))
-        st.image(random.choice(['death_'+i+'.png' for i in range(1,7)]))
+        st.image(random.choice(['death_'+str(i)+'.png' for i in range(1,7)]))
