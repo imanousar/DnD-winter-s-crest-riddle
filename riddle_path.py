@@ -3,7 +3,7 @@ import random
 import os 
 from constants import RIDLLE_2, error_messages, TITLE, QUESTION, DEATH_CAPTION
 
-correct_word = os.environ.get('SOLUTION')
+correct_word = os.environ.get('SOLUTIOn')
 
 
 # Streamlit application layout
@@ -16,6 +16,11 @@ st.image("img/dnd_dice.png", width=120)
 if st.button("Roll your D20"):
     if user_input == correct_word:
         st.success("Correct!")
+
+        st.write("Please watch the video first")
+
+        st.video("freljord_video.mp4")
+
         st.write(RIDLLE_2)
         # Display text and image
         st.image("img/dnd_riddle.png")  # Update with your image path
